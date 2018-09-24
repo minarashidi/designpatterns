@@ -43,3 +43,9 @@ static factory method (provides the global point to access to the singleton obje
 ### builder design pattern
 The Builder pattern is one of the creational patterns.
 we use this pattern for complex objects and dealing with constructors that require too many parameters.
+
+A couple of important points in my poc:
+
+*  The User constructor is private, which means that this class can not be directly instantiated from the client code.
+*  The class is immutable. All attributes are final and they’re set on the constructor. Additionally, we only provide getters for them.
+*  The builder constructor only receives the required attributes and this attributes are the only ones that are defined “final” on the builder to ensure that their values are set on the constructor.

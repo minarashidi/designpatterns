@@ -8,7 +8,7 @@ public class User {
   private final String phone; //optional
   private final String address; //optional
 
-  User(UserBuilder builder) {
+  private User(UserBuilder builder) {
     this.firstName = builder.firstName;
     this.lastName = builder.lastName;
     this.age = builder.age;
